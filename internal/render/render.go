@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/hafizmfadli/bookings-web/pkg/config"
-	"github.com/hafizmfadli/bookings-web/pkg/models"
+	"github.com/hafizmfadli/bookings-web/internal/config"
+	"github.com/hafizmfadli/bookings-web/internal/models"
 	"github.com/justinas/nosurf"
 )
 
@@ -22,6 +22,9 @@ func NewTemplate(a *config.AppConfig) {
 }
 
 func AddDefaultData(td *models.TemplateData, r *http.Request) *models.TemplateData {
+	td.Flash = app.Session.PopString(r.Context(), "flash")
+	td.Warning = app.Session.PopString(r.Context(), "warning")
+	td.Error = app.Session.PopString(r.Context(), "error")
 	td.CSRFToken = nosurf.Token(r)
 	return td
 }
