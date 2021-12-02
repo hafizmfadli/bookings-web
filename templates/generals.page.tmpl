@@ -53,39 +53,6 @@
 
 {{define "js"}}
 <script>
-    document.getElementById("check-availability-button").addEventListener("click", function () {
-        let html = `
-        <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
-            <div class="form-row">
-                <div class="col">
-                    <div class="form-row" id="reservation-dates-modal">
-                        <div class="col">
-                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
-                        </div>
-                        <div class="col">
-                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </form>
-        `;
-        attention.custom({
-            title: 'Choose your dates',
-            msg: html,
-            callback: function(result) {
-                console.log("called");
-
-                fetch('/search-availability-json')
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        console.log(data.ok);
-                        console.log(data.message);
-                    })
-            }
-        });
-    })
+    BookRoom("1", "{{.CSRFToken}}")
 </script>
 {{end}}
