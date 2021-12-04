@@ -7,6 +7,7 @@ import (
 	"log"
 
 	"github.com/alexedwards/scs/v2"
+	"github.com/hafizmfadli/bookings-web/internal/models"
 )
 
 // AppConfig holds application config
@@ -17,4 +18,5 @@ type AppConfig struct {
 	ErrorLog      *log.Logger
 	InProduction  bool
 	Session       *scs.SessionManager
+	MailChan      chan models.MailData
 }
