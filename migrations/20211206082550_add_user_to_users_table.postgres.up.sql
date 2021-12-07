@@ -1,0 +1,1 @@
+INSERT INTO "public"."users" ("first_name", "last_name", "email", "password", "access_level", "created_at", "updated_at") VALUES ('hafiz', 'fadli', 'admin@admin.com', '$2a$12$dPgl1rqjjs2Hss4PvvTuge5/CIk8d6QOL7Wp5rGPg9RahQE.rkoN2', 3, '2021-12-04 08:10:17', '2021-12-04 08:10:19');

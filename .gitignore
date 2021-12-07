@@ -1,4 +1,4 @@
 *.exe
 database.yml
-*.sql
+schema.sql
 *.bat
