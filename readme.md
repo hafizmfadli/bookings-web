@@ -6,3 +6,4 @@ This is the repository for my bookings and reservation project.I created this pr
 - Uses the [chi](https://github.com/go-chi/chi) router
 - Uses [alex edwards SCS](https://github.com/alexedwards/scs) session management
 - Uses [nosurf](https://github.com/justinas/nosurf)
+- Uses [Royal UI admin template](https://github.com/BootstrapDash/RoyalUI-Free-Bootstrap-Admin-Template)
